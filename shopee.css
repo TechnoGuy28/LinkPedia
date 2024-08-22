@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: noto sans;
+    src: url(Fontes/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf) format("trueType");
+}
+@font-face {
+    font-family: noto serif;
+    src: url(Fontes/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth\,wght.ttf) format("trueType");
+}
+@font-face {
+    font-family: radio canada;
+    src: url(Fontes/Radio_Canada_Big/RadioCanadaBig-VariableFont_wght.ttf) format("trueType");
+}
+@font-face {
+    font-family: lobster;
+    src: url(Fontes/Lobster/Lobster-Regular.ttf) format('trueType');
+}
+@font-face {
+    font-family: MADE;
+    src: url(Fontes/MADE\ Sunflower\ PERSONAL\ USE.otf) format('openType');
+}
+:root {
+    --font1: 'noto sans';
+    --font2: 'noto serif';
+    --radio: 'radio canada';
+    --lobster: 'lobster';
+    --made: 'MADE';
+
+    --cor-principal: #fd6132;
+    --cor-secundária: #fd61328a;
+
+    --corbotao: #25d366;
+}
+body {
+    width: 98%;
+    max-width: 1080px;
+    background-color: hsla(18, 91%, 90%, 0.26);
+    margin: auto;
+}
+header {
+    display: flex;
+    position: relative;
+    height: 150px;
+    max-width: 1080px;
+    background-color: var(--cor-principal);
+    background-image: url(imagens/—Pngtree—leaves\ bamboo\ leaves\ shadow_7999208.png);
+    background-position: left top;
+    background-size: 250px;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+header h1 {
+    position: absolute;
+    left: 16%;
+    top: 18%;
+    font-family: var(--radio);
+    color: hsl(14, 98%, 94%);
+    text-shadow: 0 0 10px rgba(124, 7, 7, 0.726);
+}
+header h2 {
+    position: absolute;
+    font-size: 2.2em;
+    color: hsl(65, 58%, 90%);
+    top: 43%;
+    left: 30%;
+    font-family: var(--lobster);
+    text-shadow: 0 0 10px hsla(64, 100%, 41%, 0.404);
+}
+.img1 {
+    position: absolute;
+    width: 110px;
+    right: 2%;
+    top: 30%;
+    transform: rotate(7deg);
+}
+.img2 {
+   position: absolute;
+   height: 96%;
+   top: 4%;
+   left: 1%;
+   z-index: 1;
+   text-shadow: 0 0 5px black;
+}
+nav {
+    position: sticky;
+    top: 1%;
+    height: 60px;
+    width: 100%;
+    background-image: linear-gradient(white 55%, var(--cor-secundária)160%);
+    z-index: 2;
+}
+nav a {
+    font-family: var(--font1);
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.menu {
+    display: inline-table;
+    margin-top: 3px;
+    height: 59px;
+    width: 49px;
+    margin-left: 5px;
+}
+.menu img {
+    top: 0;
+    margin-left: 25%;
+    width: 27px;
+}
+.menu p {
+    text-align: center;
+    font-family: var(--font3);
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #126430;
+    text-shadow: 0 0 1px ;
+    width: 50px;
+}
+.ss {
+    grid-column: 1/-1;
+    font-family: var(--made);
+    font-size: 1.2em;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    text-shadow: -3px 0 6px white;
+    padding: 1px;
+    border: solid 1px lightcoral;
+    background-image: linear-gradient(to right, hsl(0, 75%, 60%) -10%, transparent);
+    border-radius: 2px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.473);
+}
+#ss1 {
+    background-image: linear-gradient(to right, transparent -15%, hsl(0, 75%, 60%) 90%);
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(-1, 1fr);
+    margin-top: 4px;
+}
+main .item {
+    height: 210px;
+    margin: 4px;
+    background-color: rgba(240, 255, 255, 0.733);
+    border: solid 0.5px rgba(0, 0, 0, 0.116);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.116);
+}
+.item div {
+    height: 57%;
+    width: 100%;
+}
+.item a {
+    position: relative;
+    display: block;
+    height: 43%;
+    text-decoration: none;
+    margin: 0 7px ;
+    color: black;
+}
+.item a > .p3 {
+    font-family: var(--font1);
+    font-size: 0.7em;
+    height: 31px;
+    padding-top: 3px;
+    max-height: 31px;
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    
+}
+.item a > .p1 {
+    position: absolute;
+    color: var(--cor-principal);
+    font-family: var(--font1);
+    font-weight: bold;
+    font-size: 0.9em;
+    left: -1%;
+    bottom: 8%;
+}
+.item a > .p2 {
+    position: absolute;
+    font-family: var(--font1);
+    font-size: 0.6em;
+    right: 1%;
+    bottom: 42%;
+}
+.item a > button {
+    position: absolute;
+    right: 1%;
+    bottom: 8%;
+    font-family: var(--font1);
+    font-weight: bold;
+    color: #fff;
+    background-image: linear-gradient( #25d366 30%, hsl(142, 31%, 40%));
+    border: solid 2px hsl(110, 50%, 90%); 
+    box-shadow:  -2.5px 2px 2.5px rgba(0, 0, 0, 0.329);
+    padding: 1px 0;
+    border-radius: 5px;
+    height: fit-content;
+    width: 54%;
+}
+.bg1 {
+    background-image: url(imagens/kit-toalha.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg2 {
+    background-image: url(imagens/mochila-de-saco.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg3 {
+    background-image: url(imagens/kit-tapete.webp);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bg4 {
+    background-image: url(imagens/calcas-joger.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg5 {
+    background-image: url(imagens/kit-camisetas.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg6 {
+    background-image: url(imagens/sapatilha.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg7 {
+    background-image: url(imagens/saco-dormir.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg8 {
+    background-image: url(imagens/escova-5-1.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg9 {
+    background-image: url(imagens/torneira-gourmet.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg10 {
+    background-image: url(imagens/placa-pix.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg11 {
+    background-image: url(imagens/kit-espelho.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg12 {
+    background-image: url(imagens/cobre-cama.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg13 {
+    background-image: url(imagens/cortina.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg14 {
+    background-image: url(imagens/xiaomi.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg15 {
+    background-image: url(imagens/conjunto.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg16 {
+    background-image: url(imagens/escorredor.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg17 {
+    background-image: url(imagens/pulseira.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg18 {
+    background-image: url(imagens/berloqueseparador.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg19 {
+    background-image: url(imagens/pingenteberloque.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg20 {
+    background-image: url(imagens/copotermino.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg21 {
+    background-image: url(imagens/kitchurrasco.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg22 {
+    background-image: url(imagens/conjuntotermico.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg23 {
+    background-image: url(imagens/luvatermica.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg24 {
+    background-image: url(imagens/luvacouro.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg25 {
+    background-image: url(imagens/macaquinho.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg26 {
+    background-image: url(imagens/vestidoplus.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg27 {
+    background-image: url(imagens/ciganinhaplus.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg28 {
+    background-image: url(imagens/batonmatte.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg29 {
+    background-image: url(imagens/batonchocolate.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg30 {
+    background-image: url(imagens/paralianca.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg31 {
+    background-image: url(imagens/blusafisio.webp);
+    background-position: center center;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+}.bg32 {
+    background-image: url(imagens/oculos_retro.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg33 {
+    background-image: url(imagens/cardigan_frio.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg34 {
+    background-image: url(imagens/conjunto_legging.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg35 {
+    background-image: url(imagens/joger_premiun.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg36 {
+    background-image: url(imagens/colageno.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg37 {
+    background-image: url(imagens/cresce_bumbum.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg38 {
+    background-image: url(imagens/ADESIVO_LAVAVEL.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg39 {
+    background-image: url(imagens/taboa_madeira.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}.bg40 {
+    background-image: url(imagens/vestido_ongo.webp);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+footer {
+    height: 30px;
+    background-image: linear-gradient(to right, #fd6132a1 15%, #ffffffa1);
+    width: 100%;
+    font-family: var(--font1);
+    padding: 0 5px;
+    margin-top: 2px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+footer p {
+    padding-top: 2px;
+}
+footer img {
+    width: 40px;
+    position: absolute;
+    top: -44%;
+    right: 6%;
+}
+footer button {
+    font-family: var(--lobster);
+    font-size: 1.4em;
+    color: hsl(150, 88%, 34%);
+    background-color: transparent;
+    height: fit-content;
+    width: fit-content;
+    text-shadow: 0 2px 3px rgba(126, 126, 126, 0.425);
+    position: absolute;
+    top: -15%;
+    padding: 1px 9px;
+    border: none;
+}
+@keyframes relampago {
+    to {
+        width: 35%;
+        height: 92%;
+        left: 3%;
+    }
+}
+@media (max-width: 390px) {
+    .bg1 {
+        background-image: url(imagens/kit-toalha1.webp);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .bg2 {
+        background-image: url(imagens/mochila-de-saco1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg3 {
+        background-image: url(imagens/kit-tapete1.webp);
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .bg4 {
+        background-image: url(imagens/calcas-joger1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg5 {
+        background-image: url(imagens/kit-camisetas1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg6 {
+        background-image: url(imagens/sapatilha1.webp);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .bg7 {
+        background-image: url(imagens/saco-dormir1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg8 {
+        background-image: url(imagens/escova-5-1__1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg9 {
+        background-image: url(imagens/torneira-gourmet1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg10 {
+        background-image: url(imagens/placa-pix1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg11 {
+        background-image: url(imagens/kit-espelho1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg12 {
+        background-image: url(imagens/cobre-cama1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg13 {
+        background-image: url(imagens/cortina1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg14 {
+        background-image: url(imagens/xiaomi1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg15 {
+        background-image: url(imagens/conjunto1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg16 {
+        background-image: url(imagens/escorredor1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg17 {
+        background-image: url(imagens/pulseira1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg18 {
+        background-image: url(imagens/berloqueseparador1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg19 {
+        background-image: url(imagens/pingenteberloque1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg20 {
+        background-image: url(imagens/copotermino1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg21 {
+        background-image: url(imagens/kitchurrasco1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg22 {
+        background-image: url(imagens/conjuntotermico1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg23 {
+        background-image: url(imagens/luvatermica1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg24 {
+        background-image: url(imagens/luvacouro1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg25 {
+        background-image: url(imagens/macaquinho1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg26 {
+        background-image: url(imagens/vestidoplus1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg27 {
+        background-image: url(imagens/ciganinhaplus.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg28 {
+        background-image: url(imagens/batonmatte1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg29 {
+        background-image: url(imagens/batonchocolate1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg30 {
+        background-image: url(imagens/paralianca1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg31 {
+        background-image: url(imagens/blusafisio1.webp);
+        background-position: center center;
+        background-size: 80% 100%;
+        background-repeat: no-repeat;
+    }.bg32 {
+        background-image: url(imagens/oculos_retro1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg33 {
+        background-image: url(imagens/cardigan_frio1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg34 {
+        background-image: url(imagens/conjunto_legging1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg35 {
+        background-image: url(imagens/joger_premiun1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg36 {
+        background-image: url(imagens/colageno1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg37 {
+        background-image: url(imagens/cresce_bumbum1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg38 {
+        background-image: url(imagens/ADESIVO_LAVAVEL1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg39 {
+        background-image: url(imagens/taboa_madeira1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }.bg40 {
+        background-image: url(imagens/vestido_ongo1.webp);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
